@@ -1,0 +1,17 @@
+# python / django
+backend/venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+*.log
+.env
+
+#django migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# react
+frontend/node_modules/
+frontend/build/
+frontend/.env
