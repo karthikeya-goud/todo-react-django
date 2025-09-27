@@ -50,11 +50,12 @@ def update_todo(request,id):
     try:
         todo=Todo.objects.get(id=id)
     except Todo.DoesNotExist:
-        return JsonResponse({'err':"Todo record not found"},status=405)
+        return JsonResponse({'err':"Todo record not found"},status=404)
     
     try:
         data=json.loads(request.body)
-        print(data)
+        if len(data['title'])==0:return JsonResponse({'err':"title is missing"},status=400)
+
         title=data.get("title")
         desc=data.get('description')
         date=data.get('deadline')
@@ -62,24 +63,16 @@ def update_todo(request,id):
             date=datetime.strptime(date,'%Y-%m-%d').date()
         completed=data.get('completed')
 
-        if title:
-            todo.title=title
-        
-        if desc:
-            todo.description=desc
-        
-        if date:
-            todo.deadline=date
-        
-        if completed is not None:
-            todo.completed=completed
-        
+        todo.title=data.get('title',todo.title)
+        todo.description=data.get('desc',todo.description)
+        todo.deadline=date if date is not None else todo.deadline
+        todo.completed=data.get('completed',todo.completed)
         todo.save()
 
-        return JsonResponse({'msg':"todo updated successfully"})
+        return JsonResponse({'msg':"todo updated successfully"},status=204)
 
     except Exception as e:
-        return JsonResponse({'err':str(e)},status=404)
+        return JsonResponse({'err':str(e)},status=400)
 
 @csrf_exempt
 def delete_todo(request,id):
@@ -90,6 +83,6 @@ def delete_todo(request,id):
     try:
         todo=Todo.objects.get(id=id)
         todo.delete()
-        return JsonResponse({"msg": "Todo deleted successfully"})
+        return JsonResponse({"msg": "Todo deleted successfully"},status=204)
     except Todo.DoesNotExist:
         return JsonResponse({'err':'Todo does not exsist'},status=404)
