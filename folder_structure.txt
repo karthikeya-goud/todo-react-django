@@ -1,0 +1,57 @@
+Todo-react-django
+|   .gitignore
+|   folder_structure.txt
+|   notes.txt
+|   README.md
+|   requirements.txt
+|   
++---backend
+|   |   db.sqlite3
+|   |   manage.py
+|   |   
+|   +---backend
+|   |   |   asgi.py
+|   |   |   settings.py
+|   |   |   urls.py
+|   |   |   wsgi.py
+|   |   |   __init__.py
+|   |   |   
+|   |   
+|   +---todo
+|   |   |   admin.py
+|   |   |   apps.py
+|   |   |   models.py
+|   |   |   tests.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---migrations
+\---frontend
+    |   .gitignore
+    |   package-lock.json
+    |   package.json
+    |   README.md
+    |   tsconfig.json
+    +---public
+    |       favicon.ico
+    |       index.html
+    |       logo192.png
+    |       logo512.png
+    |       manifest.json
+    |       robots.txt
+    |       
+    \---src
+        |   App.css
+        |   App.test.tsx
+        |   App.tsx
+        |   index.css
+        |   index.tsx
+        |   logo.svg
+        |   react-app-env.d.ts
+        |   reportWebVitals.ts
+        |   setupTests.ts
+        |   
+        \---todo
+                todo.tsx
+                

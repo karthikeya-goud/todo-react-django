@@ -1,0 +1,48 @@
+TODO using React + Django
+---------------------------
+
+I wanna do CRUD operations and create api's and thought connect to the react application , so i selected a todo application
+
+So for todo, model i took is (title,description,deadline:date,completed:boolean)
+
+
+First i started with the setting up the project structure
+
+created a folder name todo-react-django
+ in that created 2 folders backend,frontend
+ in backend , created a python virtual environment
+ same for the frontend ,created a react application with typescript template
+
+
+I started with backend 
+    wrote model code,attached to admin panel
+    wrote FBV's for the CRUD operations
+    i tested the api end points manully using postman
+
+    then got an idea to write testcases
+    took help from chatgpt , understood how to write testcases
+    so wriiten some test cases for the api's
+    exceuted the test cases 
+
+
+In frontend
+    decided to do a basic UI
+    created a simple layout 
+    using axios, called the endpoints
+
+
+
+what i learnt from this
+------------------------
+- CRUD operations
+- Connecting to React
+- understood some git commands while doing project
+
+
+what we can do more
+-------------------
+- Giving filtering options
+- optimizing some redudant code
+- field level checking in frontend and backend
+- updating error handling and showing codes and messages in Toast
+- making ui responsive
