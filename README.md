@@ -24,7 +24,7 @@ This project demonstrates a basic **CRUD** Todo application using **React** for 
 ---
 
 ## 📂 Project Structure
-
+```
 todo-react-django
 |   .gitignore
 |   folder_structure.txt
@@ -81,7 +81,7 @@ todo-react-django
         |   
         \---todo
                 todo.tsx
-
+```
 
 
 ---
@@ -93,7 +93,7 @@ todo-react-django
 ```bash
 git clone https://github.com/karthikeya-goud/todo-react-django.git
 cd todo-react-django
-
+```
 
 ### 2. Set up the Django Backend
 
@@ -106,7 +106,7 @@ pip install -r requirements.txt
 # Apply migrations and start server
 python manage.py migrate
 python manage.py runserver
-
+```
 
 ### 3. Set up the React frontend
 
@@ -114,12 +114,12 @@ python manage.py runserver
 cd frontend
 npm install
 npm start
-
+```
 
 Frontend runs on http://localhost:3000, backend on http://localhost:8000
 
 
-<pre> ### 📡 API Endpoints | Method | Endpoint | Description | |--------|------------------------|---------------------| | GET | `/api/get/` | List all todos | | POST | `/api/create/` | Create a new task | | PUT | `/api/update/<id>/` | Update a task | | DELETE | `/api/delete/<id>/` | Delete a task | </pre>
+<pre> ### 📡 API Endpoints ```| Method | Endpoint | Description | |--------|------------------------|---------------------| | GET | `/api/get/` | List all todos | | POST | `/api/create/` | Create a new task | | PUT | `/api/update/<id>/` | Update a task | | DELETE | `/api/delete/<id>/` | Delete a task |``` </pre>
 
 
 #🙌 Acknowledgements
