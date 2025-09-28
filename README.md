@@ -119,9 +119,17 @@ npm start
 Frontend runs on http://localhost:3000, backend on http://localhost:8000
 
 
-<pre> ### 📡 API Endpoints ```| Method | Endpoint | Description | |--------|------------------------|---------------------| | GET | `/api/get/` | List all todos | | POST | `/api/create/` | Create a new task | | PUT | `/api/update/<id>/` | Update a task | | DELETE | `/api/delete/<id>/` | Delete a task |``` </pre>
+### 📡 API Endpoints
+
+| Method | Endpoint                | Description         |
+|--------|-------------------------|---------------------|
+| GET    | `/api/get/`             | List all todos      |
+| POST   | `/api/create/`          | Create a new task   |
+| PUT    | `/api/update/<id>/`     | Update a task       |
+| DELETE | `/api/delete/<id>/`     | Delete a task       |
 
 
-#🙌 Acknowledgements
 
-##This project is for learning purposes and is inspired by basic full-stack development practices using Django and React.
+## 🙌 Acknowledgements
+
+### This project is for learning purposes and is inspired by basic full-stack development practices using Django and React.
